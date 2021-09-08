@@ -4,7 +4,7 @@
 using namespace std;
 
 int main (){
-    int num_secret, num_guess, rod, i;
+    int num_secret, num_guess, num_rod;
     bool repetir;
 
     srand (time(NULL));
@@ -21,19 +21,19 @@ int main (){
 
             else if (num_guess > num_secret){
                 cout<<"Valor alto demais >.< !! Tente novamente: \n";
-                i++;
+                num_rod++;
                 cin>>num_guess;
             }
 
             else if(num_guess < num_secret){
                 cout<<"Valor pequeno demais >.< !! Tente novamente: \n";
-                i++;
+                num_rod++;
                 cin>>num_guess;
             }
 
             else{
-                i++;
-                cout<<"Parabéns, você descobriu o número em "<< i << "rodadas!! \n";
+                num_rod++;
+                cout<<"Parabéns, você descobriu o número em "<< num_rod << "rodadas!! \n";
                 repetir = false;
             }
         }
