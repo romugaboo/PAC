@@ -3,25 +3,21 @@ using namespace std;
 
 int main (){
     int valor, quantidade;
+    int nota [6] {100,50,20,10,5,2};
 
     cout<<"Digite uma quantia em reais: \n";
     cin>>valor;
     
-        for (int nota=100; valor>=50; nota/2){
-            quantidade = valor / nota;
-            valor = valor % nota;
-            cout<<quantidade<<" nota(s) de "<<nota;
+        for (int i=0; valor>=nota[i]; i++){
+            quantidade = valor / nota[i];
+            valor = valor % nota[i];
+            cout<<quantidade<<" nota(s) de "<<nota[i]<<" reais\n";
+            i++;
         }
-        for (int nota=20; valor>=5; nota/2){
-            quantidade = valor / nota;
-            valor = valor % nota;
-            cout<<quantidade<<" nota(s) de "<<nota;
+        
+        if (valor=1){
+             cout<<"1 moeda de 1 real \n";
         }
-        for (int nota=2; valor>=nota; nota/2){
-            quantidade = valor / nota;
-            valor = valor % nota;
-            cout<<quantidade<<" nota(s) de "<<nota;
-        }
-    
-  return 0;
+        
+    return 0;
 }
