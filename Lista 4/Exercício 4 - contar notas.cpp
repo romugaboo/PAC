@@ -8,7 +8,7 @@ int main (){
     cout<<"Digite uma quantia em reais: \n";
     cin>>valor;
     
-        for (int i=0; valor>=nota[i]; i++){
+        for (int i=0; valor>=nota[i];){
             quantidade = valor / nota[i];
             valor = valor % nota[i];
             cout<<quantidade<<" nota(s) de "<<nota[i]<<" reais\n";
@@ -18,6 +18,6 @@ int main (){
         if (valor=1){
              cout<<"1 moeda de 1 real \n";
         }
-        
+
     return 0;
 }
