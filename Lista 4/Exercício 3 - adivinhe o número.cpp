@@ -4,17 +4,17 @@
 using namespace std;
 
 int main (){
-    int num_secret, num_guess, num_rod;
+    int num_secret, num_guess, num_rod = 0;
     bool repetir;
 
     srand (time(NULL));
-    num_secret = rand() % 100;
+    num_secret = rand()%100;
     
     cout<<"Em qual número o computador está pensando...? \n";
     cin>>num_guess;
 
         do{
-            if (num_guess<0){
+            if (num_guess < 0){
                 cout<<"Você perdeu :c \n";
                 repetir==false;
             }
